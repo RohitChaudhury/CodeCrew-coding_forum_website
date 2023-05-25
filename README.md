@@ -22,7 +22,7 @@ CodeCrew is a dynamic and interactive Coding Forum website built entirely on cor
    ```shell
    git clone https://github.com/RohitChaudhury/CodeCrew-coding_forum_website.git
 Set up a local development environment with MAMP or similar software.
-Import the provided database file (database.sql) into your MySQL database using phpMyAdmin or any other database management tool.
+Import the provided database file [db_forum.sql](db_forum.sql) into your MySQL database using phpMyAdmin or any other database management tool.
 Update the database connection settings in the config.php file with your database credentials.
 Launch the website by accessing the appropriate URL in your browser.
 
