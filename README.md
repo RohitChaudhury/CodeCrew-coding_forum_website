@@ -31,8 +31,9 @@ Launch the website by accessing the appropriate URL in your browser.
 This is a personal project, and I currently do not accept contributions or pull requests. However, I appreciate your interest in the project!
 
 
-##License
-This project is licensed under the MIT License.
+## License
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
+
 
 
 
