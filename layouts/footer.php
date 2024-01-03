@@ -7,12 +7,6 @@
 </div>
 </body>
 
-<!-- Javascript for the Modal of BS -->
-<script>
-  $('#myModal').on('shown.bs.modal', function() {
-    $('#myInput').trigger('focus')
-  })
-</script>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -24,6 +18,12 @@
 <script>
   $(function() {
     $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+<!-- Javascript for the Modal of BS -->
+<script>
+  $('#myModal').on('shown.bs.modal', function() {
+    $('#myInput').trigger('focus')
   })
 </script>
 
