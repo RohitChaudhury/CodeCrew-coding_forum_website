@@ -237,7 +237,7 @@ if (!isset($_SESSION['category_id']) || $_SESSION['category_id'] != true) {
 
         <!-- main logo for the image -->
         <?php
-        require_once('/Applications/MAMP/htdocs/../layouts/db_connect.php');
+        require_once('/Applications/MAMP/htdocslayouts/db_connect.php');
         $cat_id = $_SESSION['category_id'];
 
         // fetching the category data from the session
