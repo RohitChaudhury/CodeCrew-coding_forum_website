@@ -2,6 +2,8 @@
 
 <?php
 ob_start();
+session_start();
+
 // functions for the Registrastion of the user: 
 function user_exist($conn, $email)
 {
@@ -101,7 +103,6 @@ function login_user($conn, $password, $email)
         header("location: log_in.php?err=password_no_match");
         exit();
     }
-    session_start();
     $_SESSION['user_id'] = $user[0];
     $_SESSION['username'] = $user[1];
     header("location: home.php");
