@@ -1,6 +1,7 @@
 <!--Restricting side from using this without Authentication -->
 <?php
 session_start();
+ob_clean();
 if (!isset($_SESSION['username']) || $_SESSION['username'] != true) {
   header('location: log_in.php');
   exit;
@@ -117,7 +118,7 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] != true) {
         <div class="dropdown-menu dropdown-menu-right dropdown-menu-left">
           <a class="dropdown-item" href="home.php"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home</a>
           <a class="dropdown-item" href="about.php"><i class="fa-solid fa-eject"></i>&nbsp;&nbsp;About</a>
-          <a class="dropdown-item" href="/topics_sessions/user_profile_sessions.php?user_id=<?php echo ($_SESSION['user_id'])  ?>"><i class="fa-solid fa-pencil"></i>&nbsp;&nbsp;Edit Profile</a>
+          <a class="dropdown-item" href="/PHP/Forum_website//topics_sessions/user_profile_sessions.php?user_id=<?php echo ($_SESSION['user_id'])  ?>"><i class="fa-solid fa-pencil"></i>&nbsp;&nbsp;Edit Profile</a>
           <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal"><i class="fa-solid fa-right-from-bracket fa-sm"></i>&nbsp;&nbsp;&nbsp;Logout</i></a>
         </div>
       </div>
@@ -171,7 +172,7 @@ if (!isset($_SESSION['username']) || $_SESSION['username'] != true) {
             <div class="card-body">
               <h5 class="card-title text-center">' . $result['name'] . '</h5>
               <p class="card-text">' . $result['description'] . '</p>
-              <a href="/topics_sessions/community_session.php?id=' . $result['id'] . '" class="card-link">Visit Community</a>
+              <a href="/PHP/Forum_website/topics_sessions/community_session.php?id=' . $result['id'] . '" class="card-link">Visit Community</a>
             </div>
           </div>
         </div>

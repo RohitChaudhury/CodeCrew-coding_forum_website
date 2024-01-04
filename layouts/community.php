@@ -156,7 +156,7 @@ if (!isset($_SESSION['category_id']) || $_SESSION['category_id'] != true) {
         <div class="dropdown-menu dropdown-menu-right dropdown-menu-left">
           <a class="dropdown-item" href="home.php"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home</a>
           <a class="dropdown-item" href="about.php"><i class="fa-solid fa-eject"></i>&nbsp;&nbsp;About</a>
-          <a class="dropdown-item" href="/../topics_sessions/user_profile_sessions.php?user_id=<?php echo ($_SESSION['user_id'])  ?>"><i class="fa-solid fa-pencil"></i>&nbsp;&nbsp;Edit Profile</a>
+          <a class="dropdown-item" href="/PHP/Forum_website/topics_sessions/user_profile_sessions.php?user_id=<?php echo ($_SESSION['user_id'])  ?>"><i class="fa-solid fa-pencil"></i>&nbsp;&nbsp;Edit Profile</a>
           <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal"><i class="fa-solid fa-right-from-bracket fa-sm"></i>&nbsp;&nbsp;&nbsp;Logout</i></a>
         </div>
       </div>
@@ -237,7 +237,7 @@ if (!isset($_SESSION['category_id']) || $_SESSION['category_id'] != true) {
 
         <!-- main logo for the image -->
         <?php
-        require_once('/Applications/MAMP/htdocslayouts/db_connect.php');
+        require_once('db_connect.php');
         $cat_id = $_SESSION['category_id'];
 
         // fetching the category data from the session
@@ -290,7 +290,7 @@ if (!isset($_SESSION['category_id']) || $_SESSION['category_id'] != true) {
 
             <div>
               <?php
-              echo ('<a href="/../topics_sessions/form_session.php?form_id=' . $_SESSION['category_id'] . '&code_name=' . $category['name'] . '"><button type="button" class="btn btn-small btn-success ms-auto my-4 mr-2">Ask?</button></a>');
+              echo ('<a href="/PHP/Forum_website/topics_sessions/form_session.php?form_id=' . $_SESSION['category_id'] . '&code_name=' . $category['name'] . '"><button type="button" class="btn btn-small btn-success ms-auto my-4 mr-2">Ask?</button></a>');
               ?>
             </div>
           </div>
@@ -313,9 +313,9 @@ if (!isset($_SESSION['category_id']) || $_SESSION['category_id'] != true) {
                     if ($result['user_id'] == $_SESSION['user_id']) {
                       echo ('
                   <li class="list-group-item bg-light">
-                <h5 style="font-family: ' . 'Roboto Slab' . ', serif;"><a href="/../topics_sessions/answer_session.php?topic_id=' . $result['id'] . '">' . $result['subject'] . '</a></h5>
-                <div class="user_name" style="font-family: \'Raleway\', sans-serif;"><i class="fa-solid fa-circle-user"></i><a href="/../topics_sessions/user_profile_sessions.php?user_id=' . $data['id'] . '"> ' . $user_name . '</a></div>
-                <a href="/../topics_sessions/answer_session.php?topic_id=' . $result['id'] . '">
+                <h5 style="font-family: ' . 'Roboto Slab' . ', serif;"><a href="/PHP/Forum_website/topics_sessions/answer_session.php?topic_id=' . $result['id'] . '">' . $result['subject'] . '</a></h5>
+                <div class="user_name" style="font-family: \'Raleway\', sans-serif;"><i class="fa-solid fa-circle-user"></i><a href="/PHP/Forum_website/topics_sessions/user_profile_sessions.php?user_id=' . $data['id'] . '"> ' . $user_name . '</a></div>
+                <a href="/PHP/Forum_website/topics_sessions/answer_session.php?topic_id=' . $result['id'] . '">
                   <div class="text-muted" style="font-weight: 300;"> 
                     Q: ' . $result['question']
                         . '</div>
@@ -346,9 +346,9 @@ if (!isset($_SESSION['category_id']) || $_SESSION['category_id'] != true) {
                     } else {
                       echo ('
                   <li class="list-group-item bg-light">
-                <h5 style="font-family: ' . 'Roboto Slab' . ', serif;"><a href="/../topics_sessions/answer_session.php?topic_id=' . $result['id'] . '">' . $result['subject'] . '</a></h5>
-                <div class="user_name" style="font-family: \'Raleway\', sans-serif;"><i class="fa-solid fa-circle-user"></i><a href="/../topics_sessions/user_profile_sessions.php?user_id=' . $data['id'] . '"> ' . $user_name . '</a></div>
-                <a href="/../topics_sessions/answer_session.php?topic_id=' . $result['id'] . '">
+                <h5 style="font-family: ' . 'Roboto Slab' . ', serif;"><a href="/PHP/Forum_website/topics_sessions/answer_session.php?topic_id=' . $result['id'] . '">' . $result['subject'] . '</a></h5>
+                <div class="user_name" style="font-family: \'Raleway\', sans-serif;"><i class="fa-solid fa-circle-user"></i><a href="/PHP/Forum_website/topics_sessions/user_profile_sessions.php?user_id=' . $data['id'] . '"> ' . $user_name . '</a></div>
+                <a href="/PHP/Forum_website/topics_sessions/answer_session.php?topic_id=' . $result['id'] . '">
                   <div class="text-muted" style="font-weight: 300;"> 
                     Q: ' . $result['question']
                         . '</div></a>');
@@ -404,9 +404,9 @@ if (!isset($_SESSION['category_id']) || $_SESSION['category_id'] != true) {
 
                       echo ('
                     <li class="list-group-item bg-light">
-                    <h5 style="font-family: ' . 'Roboto Slab' . ', serif;"><a href="/../topics_sessions/answer_session.php?topic_id=' . $result['id'] . '">' . $result['subject'] . '</a></h5>
-                    <div class="user_name" style="font-family: \'Raleway\', sans-serif;"><i class="fa-solid fa-circle-user"></i><a href="/../topics_sessions/user_profile_sessions.php?user_id=' . $data['id'] . '"> ' . $user_name . '</a></div>
-                    <a href="/../topics_sessions/answer_session.php?topic_id=' . $result['id'] . '">
+                    <h5 style="font-family: ' . 'Roboto Slab' . ', serif;"><a href="/PHP/Forum_website/topics_sessions/answer_session.php?topic_id=' . $result['id'] . '">' . $result['subject'] . '</a></h5>
+                    <div class="user_name" style="font-family: \'Raleway\', sans-serif;"><i class="fa-solid fa-circle-user"></i><a href="/PHP/Forum_website/topics_sessions/user_profile_sessions.php?user_id=' . $data['id'] . '"> ' . $user_name . '</a></div>
+                    <a href="/PHP/Forum_website/topics_sessions/answer_session.php?topic_id=' . $result['id'] . '">
                   <div class="text-muted" style="font-weight: 300;"> 
                     Q: ' . $result['question']
                         . '</div>
@@ -438,9 +438,9 @@ if (!isset($_SESSION['category_id']) || $_SESSION['category_id'] != true) {
                     } else {
                       echo ('
                   <li class="list-group-item bg-light">
-                <h5 style="font-family: ' . 'Roboto Slab' . ', serif;"><a href="/../topics_sessions/answer_session.php?topic_id=' . $result['id'] . '">' . $result['subject'] . '</a></h5>
-                <div class="user_name" style="font-family: \'Raleway\', sans-serif;"><i class="fa-solid fa-circle-user"></i><a href="/../topics_sessions/user_profile_sessions.php?user_id=' . $data['id'] . '"> ' . $user_name . '</a></div>
-                <a href="/../topics_sessions/answer_session.php?topic_id=' . $result['id'] . '">
+                <h5 style="font-family: ' . 'Roboto Slab' . ', serif;"><a href="/PHP/Forum_website/topics_sessions/answer_session.php?topic_id=' . $result['id'] . '">' . $result['subject'] . '</a></h5>
+                <div class="user_name" style="font-family: \'Raleway\', sans-serif;"><i class="fa-solid fa-circle-user"></i><a href="/PHP/Forum_website/topics_sessions/user_profile_sessions.php?user_id=' . $data['id'] . '"> ' . $user_name . '</a></div>
+                <a href="/PHP/Forum_website/topics_sessions/answer_session.php?topic_id=' . $result['id'] . '">
                   <div class="text-muted" style="font-weight: 300;"> 
                     Q: ' . $result['question']
                         . '</div></a>');
